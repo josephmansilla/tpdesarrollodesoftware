@@ -42,6 +42,10 @@ NivelCoberturaEnum.DISPONIBLE = new NivelCoberturaEnum("TOTAL", 0);
 NivelCoberturaEnum.PARCIAL = new NivelCoberturaEnum("PARCIAL", 1);
 NivelCoberturaEnum.NO_CUBIERTA = new NivelCoberturaEnum("NO_CUBIERTA", 2);
 
+const NivelCoberturaEnumValores = Object.values(NivelCoberturaEnum)
+    .filter(e => e instanceof NivelCoberturaEnum)
+    .map(e => e.nombre);
+
 export class DiaSemanaEnum {
     nombre;
     orden;
@@ -63,3 +67,7 @@ DiaSemanaEnum.JUEVES = new DiaSemanaEnum("JUEVES", 3);
 DiaSemanaEnum.VIERNES = new DiaSemanaEnum("VIERNES", 4);
 DiaSemanaEnum.SABADO = new DiaSemanaEnum("SABADO", 5);
 DiaSemanaEnum.DOMINGO = new DiaSemanaEnum("DOMINGO", 6);
+
+const DiaSemanaEnumValores = Object.values(DiaSemanaEnum)
+    .filter(e => e instanceof DiaSemanaEnum)
+    .map(e => e.nombre);

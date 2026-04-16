@@ -1,3 +1,0 @@
-gestionar turnos
-consultar cartillas
-recibir recordatorios

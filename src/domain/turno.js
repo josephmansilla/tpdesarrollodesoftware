@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { invalidTurno } from "../exceptions/exceptions";
-import { EstadoTurno } from "./enum.js";
+import { EstadoTurno } from "./enum/enum.js";
 
 export const turnoSchema = z.object({
     medico: medicoSchema,
