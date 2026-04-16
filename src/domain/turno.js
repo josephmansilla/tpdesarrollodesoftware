@@ -4,7 +4,7 @@ import { EstadoTurno } from "./enum.js";
 
 export const turnoSchema = z.object({
     medico: medicoSchema,
-    paciente: pacienteSchema,
+    //paciente: pacienteSchema,
     fechaHora: z.date(),
     sede: sedeSchema,
     practica: practicaSchema,
@@ -12,6 +12,7 @@ export const turnoSchema = z.object({
     historialEstado: z.enum([""]),
     costo: z.number().nonnegative(),
 });
+
 class Turno {
     constructor(medico, paciente, fechaHora, sede, practica,
                 estado, historialEstados, costo) {
