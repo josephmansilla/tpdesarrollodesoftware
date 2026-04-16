@@ -20,3 +20,6 @@ app.get("/healthCheck", (req, res) => {
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 });
+
+smsldsdkes un crack :)
+jetbrains
