@@ -1,0 +1,1 @@
+import { practicaSchema } from "../domain/medico/practica.js";

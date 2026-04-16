@@ -1,0 +1,1 @@
+import { sedeSchema  } from "../domain/medico/sede.js";

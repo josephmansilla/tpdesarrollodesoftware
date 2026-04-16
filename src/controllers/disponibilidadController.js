@@ -1,0 +1,1 @@
+import { disponbilidadHorariaSchema } from "../domain/medico/disponibilidadHoraria.js"; 

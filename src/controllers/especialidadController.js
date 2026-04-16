@@ -1,0 +1,1 @@
+import { especialidadSchema } from "../domain/medico/especialidad.js";
