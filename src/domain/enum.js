@@ -1,11 +1,11 @@
 import {values} from "lodash-es";
 
-export class EstadoTurno {
+export class EstadoTurnoEnumEnum {
     nombre;
     orden;
 
     static fromString(token) {
-        return values(EstadoTurno).find(est => est.nombre === token);
+        return values(EstadoTurnoEnum).find(est => est.nombre === token);
     }
 
     constructor(estado, orden) {
@@ -14,18 +14,22 @@ export class EstadoTurno {
     }
 }
 
-EstadoTurno.DISPONIBLE = new EstadoTurno("DISPONIBLE", 0);
-EstadoTurno.RESERVADO = new EstadoTurno("RESERVADO", 1);
-EstadoTurno.CONFIRMADO = new EstadoTurno("CONFIRMADO", 2);
-EstadoTurno.CANCELADO = new EstadoTurno("CANCELADO", 3);
-EstadoTurno.REALIZADO = new EstadoTurno("REALIZADO", 4);
+EstadoTurnoEnumEnum.DISPONIBLE = new EstadoTurnoEnumEnum("DISPONIBLE", 0);
+EstadoTurnoEnum.RESERVADO = new EstadoTurnoEnum("RESERVADO", 1);
+EstadoTurnoEnum.CONFIRMADO = new EstadoTurnoEnum("CONFIRMADO", 2);
+EstadoTurnoEnum.CANCELADO = new EstadoTurnoEnum("CANCELADO", 3);
+EstadoTurnoEnum.REALIZADO = new EstadoTurnoEnum("REALIZADO", 4);
 
-export class NivelCobertura {
+const EstadoTurnoEnumValores = Object.values(EstadoTurnoEnum)
+    .filter(e => e instanceof EstadoTurnoEnum)
+    .map(e => e.nombre);
+
+export class NivelCoberturaEnum {
     nombre;
     orden;
 
     static fromString(token) {
-        return values(EstadoTurno).find(est => est.nombre === token);
+        return values(NivelCoberturaEnum).find(est => est.nombre === token);
     }
 
     constructor(estado, orden) {
@@ -34,16 +38,16 @@ export class NivelCobertura {
     }
 }
 
-NivelCobertura.DISPONIBLE = new NivelCobertura("TOTAL", 0);
-NivelCobertura.PARCIAL = new NivelCobertura("PARCIAL", 1);
-NivelCobertura.NO_CUBIERTA = new NivelCobertura("NO_CUBIERTA", 2);
+NivelCoberturaEnum.DISPONIBLE = new NivelCoberturaEnum("TOTAL", 0);
+NivelCoberturaEnum.PARCIAL = new NivelCoberturaEnum("PARCIAL", 1);
+NivelCoberturaEnum.NO_CUBIERTA = new NivelCoberturaEnum("NO_CUBIERTA", 2);
 
-export class DiaSemana {
+export class DiaSemanaEnum {
     nombre;
     orden;
 
     static fromString(token) {
-        return values(EstadoTurno).find(est => est.nombre === token);
+        return values(EstadoTurnoEnum).find(est => est.nombre === token);
     }
 
     constructor(estado, orden) {
@@ -52,10 +56,10 @@ export class DiaSemana {
     }
 }
 
-DiaSemana.LUNES = new NivelCobertura("LUNES", 0);
-DiaSemana.MARTES = new NivelCobertura("MARTES", 1);
-DiaSemana.MIERCOLES = new NivelCobertura("MIERCOLES", 2);
-DiaSemana.JUEVES = new NivelCobertura("JUEVES", 3);
-DiaSemana.VIERNES = new NivelCobertura("VIERNES", 4);
-DiaSemana.SABADO = new NivelCobertura("SABADO", 5);
-DiaSemana.DOMINGO = new NivelCobertura("DOMINGO", 6);
+DiaSemanaEnum.LUNES = new DiaSemanaEnum("LUNES", 0);
+DiaSemanaEnum.MARTES = new DiaSemanaEnum("MARTES", 1);
+DiaSemanaEnum.MIERCOLES = new DiaSemanaEnum("MIERCOLES", 2);
+DiaSemanaEnum.JUEVES = new DiaSemanaEnum("JUEVES", 3);
+DiaSemanaEnum.VIERNES = new DiaSemanaEnum("VIERNES", 4);
+DiaSemanaEnum.SABADO = new DiaSemanaEnum("SABADO", 5);
+DiaSemanaEnum.DOMINGO = new DiaSemanaEnum("DOMINGO", 6);

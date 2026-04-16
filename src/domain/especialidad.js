@@ -2,7 +2,7 @@ import { z } from "zod"
 
 export const especialidadSchema = z.object({
     nombre: z.string().min(3).max(40),
-    duracionTurnoEnMinutos: z.number().nonnegative(),
+    duracionTurnoEnMinutos: z.int().nonnegative(),
     costoConsulta: z.number().nonnegative(),
 });
 

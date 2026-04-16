@@ -8,8 +8,8 @@ export const turnoSchema = z.object({
     fechaHora: z.date(),
     sede: sedeSchema,
     practica: practicaSchema,
-    estado: z.enum([""]),
-    historialEstado: z.enum([""]),
+    estado: z.enum(EstadoTurnoEnumValores),
+    historialEstado: z.array(z.enum(EstadoTurnoEnumValores)),
     costo: z.number().nonnegative(),
 });
 
