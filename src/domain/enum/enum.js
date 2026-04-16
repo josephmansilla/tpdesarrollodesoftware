@@ -20,7 +20,7 @@ EstadoTurnoEnum.CONFIRMADO = new EstadoTurnoEnum("CONFIRMADO", 2);
 EstadoTurnoEnum.CANCELADO = new EstadoTurnoEnum("CANCELADO", 3);
 EstadoTurnoEnum.REALIZADO = new EstadoTurnoEnum("REALIZADO", 4);
 
-const EstadoTurnoEnumValores = Object.values(EstadoTurnoEnum)
+export const EstadoTurnoEnumValores = Object.values(EstadoTurnoEnum)
     .filter(e => e instanceof EstadoTurnoEnum)
     .map(e => e.nombre);
 
@@ -42,7 +42,7 @@ NivelCoberturaEnum.DISPONIBLE = new NivelCoberturaEnum("TOTAL", 0);
 NivelCoberturaEnum.PARCIAL = new NivelCoberturaEnum("PARCIAL", 1);
 NivelCoberturaEnum.NO_CUBIERTA = new NivelCoberturaEnum("NO_CUBIERTA", 2);
 
-const NivelCoberturaEnumValores = Object.values(NivelCoberturaEnum)
+export const NivelCoberturaEnumValores = Object.values(NivelCoberturaEnum)
     .filter(e => e instanceof NivelCoberturaEnum)
     .map(e => e.nombre);
 
@@ -68,6 +68,6 @@ DiaSemanaEnum.VIERNES = new DiaSemanaEnum("VIERNES", 4);
 DiaSemanaEnum.SABADO = new DiaSemanaEnum("SABADO", 5);
 DiaSemanaEnum.DOMINGO = new DiaSemanaEnum("DOMINGO", 6);
 
-const DiaSemanaEnumValores = Object.values(DiaSemanaEnum)
+export const DiaSemanaEnumValores = Object.values(DiaSemanaEnum)
     .filter(e => e instanceof DiaSemanaEnum)
     .map(e => e.nombre);

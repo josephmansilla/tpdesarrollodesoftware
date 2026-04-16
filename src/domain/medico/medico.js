@@ -1,7 +1,11 @@
 import { z } from "zod"
+import { especialidadSchema } from "./especialidad.js"
+import { practicaSchema } from "./practica.js"
+import { sedeSchema } from "./sede.js"
+import { disponibilidadHorariaSchema } from "./disponibilidadHoraria.js"
 
 export const medicoSchema = z.object({
-    usuario: usuarioSchema,
+    //usuario: usuarioSchema,
     matricula: z.string().min(5).max(20),
     nombre: z.string().min(3).max(50),
     especialidades: z.array(especialidadSchema),
@@ -12,7 +16,7 @@ export const medicoSchema = z.object({
 
 
 
-class Medico {
+export class Medico {
     constructor(matricula, nombre, especialidades, practicas, sedes, disponibilidades) {
         this.matricula = matricula;
         this.nombre = nombre;

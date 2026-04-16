@@ -1,6 +1,7 @@
 import { z } from "zod";
-import { invalidTurno } from "../exceptions/exceptions";
-import { EstadoTurno } from "./enum/enum.js";
+import { EstadoTurnoEnumValores } from "./enum/enum.js";
+import { sedeSchema } from "../medico/sede.js";
+import { practicaSchema } from "../medico/practica.js";
 
 export const turnoSchema = z.object({
     medico: medicoSchema,
@@ -23,6 +24,6 @@ class Turno {
         this.practica = practica;
         this.estado = estado;
         this.historialEstados = historialEstados;
-        this.costo = estado;
+        this.costo = costo;
     }
 }
