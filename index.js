@@ -13,13 +13,6 @@ const PATH_MEDICAL_V1 = "/v1/sweet_medical";
 app.use(bodyParser.json());
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(spec));
 
-app.get("/healthCheck", (req, res) => {
-    res.status(200).json({mensaje:"Todo marcha bien!"})
-});
-
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
-});
 
 const PATH_DISPONIBILIDAD = PATH_MEDICAL_V1 + "disponibilidadMedico";
 const PATH_MEDICO = PATH_MEDICAL_V1 + "medico";

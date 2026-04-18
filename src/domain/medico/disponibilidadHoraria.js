@@ -1,6 +1,6 @@
 import { z } from "zod"
 
-export const disponbilidadHorariaSchema = z.object({
+export const disponibilidadHorariaSchema = z.object({
     diaSemana: z.enum(DiaSemanaEnumValores),
     horaDesde: z.string().min(2).max(10),
     horaHasta: z.string().min(2).max(10),
